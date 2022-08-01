@@ -2,11 +2,11 @@ const express = require('express');
 const routes = require('./routes');
 
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public/'));
 
 app.use(express.json());
 
