@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const publicController = require('./../../controllers/publicController');
+const {getNotesHTML, getIndexHTML} = require('./../../controllers/publicController');
 
 
-router.route('/notes').get(publicController.getNotesHTML)
+router.route('/notes').get(getNotesHTML)
 
-router.route('/').get(publicController.getIndexHTML)
+router.route('/').get(getIndexHTML)
 
 module.exports = router
